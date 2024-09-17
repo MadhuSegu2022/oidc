@@ -46,7 +46,7 @@ jobs:
         env:
           AWS_BUCKET_NAME: vfs-payments-non-prod-vas-tfstate
           AWS_BUCKET_KEY_NAME: infra.state
-        run: terraform init -backend-config="bucket=${AWS_BUCKET_NAME}" -backend-config="key=${AWS_BUCKET_KEY_NAME}" -backend-config="region=${AWS_REGION}"
+        run: terraform init -backend-config="bucket=vfs-payments-non-prod-vas-tfstate" -backend-config="key=infra.state" -backend-config="region=af-south-1"
 
       - name: Terraform Validate
         id: validate
